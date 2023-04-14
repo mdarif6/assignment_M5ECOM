@@ -1,3 +1,10 @@
-.ecom-product-img {
-  width: 200px;
+.ecom-prodcts-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.ecom-main-section {
+  display: flex;
 }

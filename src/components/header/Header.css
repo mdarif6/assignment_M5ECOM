@@ -1,0 +1,43 @@
+.ecom-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--main-bg-color);
+  padding: 1rem;
+}
+.ecom-nav-icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.search-input,
+.search-btn {
+  border: none;
+  padding: 0.5rem;
+}
+.search-input {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+.search-input:focus {
+  outline: none;
+}
+.search-btn {
+  background-color: white;
+  font-size: 0.75rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.search-wrapper {
+  max-width: 300px;
+}
+.wishlist,
+.cart {
+  width: 30px;
+  height: 30px;
+  background-color: orange;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
