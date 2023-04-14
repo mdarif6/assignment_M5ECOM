@@ -1,11 +1,8 @@
 import "./HomePage.css";
-import { useState } from "react";
-import productsData from "../../fakeData.json";
 import ProductCard from "../../components/product-card/ProductCard";
 import Sidebar from "../../components/side-bar/Sidebar";
 import { useCart } from "../../context/cart-context";
 export default function HomePage() {
-  // const [data, setData] = useState(productsData);
   const { state } = useCart();
   console.log(state);
 
@@ -14,9 +11,9 @@ export default function HomePage() {
       <div className="ecom-main-section">
         <Sidebar />
         <div className="ecom-prodcts-wrapper">
-          {/* {data.map((proditem) => {
+          {state.productsData.map((proditem) => {
             return <ProductCard proditem={proditem} />;
-          })} */}
+          })}
         </div>
       </div>
     </>

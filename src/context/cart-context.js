@@ -1,11 +1,11 @@
 import { createContext, useContext, useReducer } from "react";
 import productsData from "../fakeData.json";
 
-const initialValue = { productsData };
+const initialValue = { productsData, setCategory: [] };
 function cartReducer(state, action) {
   switch (action.type) {
-    case "":
-      return { ...state };
+    case "SET_CATEGORY":
+      return { ...state, setCategory: action.payload };
 
     default:
       return state;
