@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useCart } from "../../context/cart-context";
 
-export default function Category() {
+export default function Category({ category, index, categoryUpdate }) {
   const { state, dispatch } = useCart();
 
   function getCategory(data) {
@@ -17,7 +17,6 @@ export default function Category() {
     return data.filter((item, index, array) => {
       if (array.indexOf(item) === index) {
         uniqueArray.push(item);
-        console.log(uniqueArray);
         dispatch({ type: "SET_CATEGORY", payload: uniqueArray });
       }
     });
@@ -26,5 +25,18 @@ export default function Category() {
     getRemovalDuplicateCategoryAndSetCategory(categoryArray);
   }, []);
 
-  return <div></div>;
+  return (
+    <div>
+      <label htmlFor="category">
+        <input
+          type="checkbox"
+          name="categroy"
+          value={category}
+          id={index}
+          onChange={categoryUpdate}
+        />
+        {category}
+      </label>
+    </div>
+  );
 }
